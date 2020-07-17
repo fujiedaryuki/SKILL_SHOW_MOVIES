@@ -1,0 +1,39 @@
+<header>
+  <nav class="navbar navbar-expand-lg navigation navbar-light bg-light">
+    <%= link_to root_path, class: 'navbar-brand' do %>
+      <%= image_tag 'top.png', size: '400x100' %>
+    <% end %>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto main-nav align-items-center">
+        <li class="nav-item dropdown dropdown-slide">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          トップページ
+          </a>
+
+          <div class="dropdown-menu dropdown-menu-right">
+            <%= link_to '動画一覧ページ', '/boards', class: 'dropdown-item' %>
+            <%= link_to '動画作成', '/boards/new', class: 'dropdown-item' %>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <%= link_to 'いいね！', '/boards/bookmarks', class: 'nav-link' %>
+        </li>
+
+        <li class="nav-item dropdown dropdown-slide">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="header-profile">
+            
+          </a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <div class="dropdown-item">User.name</div>
+            <div class="dropdown-divider"></div>
+            <%= link_to 'プロフィール', '/profile', class: 'dropdown-item' %>
+
+            <%= link_to 'ログアウト', '/logout', class: 'dropdown-item' %>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
