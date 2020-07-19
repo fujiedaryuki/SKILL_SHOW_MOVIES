@@ -12,13 +12,13 @@
           </a>
 
           <div class="dropdown-menu dropdown-menu-right">
-            <%= link_to '動画一覧ページ', '/boards', class: 'dropdown-item' %>
-            <%= link_to '動画作成', '/boards/new', class: 'dropdown-item' %>
+            <%= link_to '動画一覧ページ', '#', class: 'dropdown-item' %>
+            <%= link_to '動画作成', '#', class: 'dropdown-item' %>
           </div>
         </li>
 
         <li class="nav-item">
-          <%= link_to 'いいね！', '/boards/bookmarks', class: 'nav-link' %>
+          <%= link_to 'いいね！', '#', class: 'nav-link' %>
         </li>
 
         <li class="nav-item dropdown dropdown-slide">
@@ -30,7 +30,7 @@
             <div class="dropdown-divider"></div>
             <%= link_to 'プロフィール', '/profile', class: 'dropdown-item' %>
 
-            <%= link_to 'ログアウト', '/logout', class: 'dropdown-item' %>
+            <%= link_to 'ログアウト', logout_path, class: 'dropdown-item', method: :delete %>
           </div>
         </li>
       </ul>
