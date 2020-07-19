@@ -1,0 +1,16 @@
+<header>
+  <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+    <%= link_to root_path, class: 'navbar-brand' do %>
+      <%= image_tag 'log.png' %>
+    <% end %>  
+    <div class="dropdown">
+      <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">メニュー</button>
+      <ul class="dropdown-menu">
+        <li><%= link_to 'トップページ', root_path %></li>
+        <li><%= link_to '動画一覧ページ', '#' %></li>
+        <li><%= link_to 'ログイン', login_path %></li>
+        <li><%= link_to '登録ページへ', new_user_path %></li>
+      </ul>
+    </div>
+  </nav> 
+</header>
