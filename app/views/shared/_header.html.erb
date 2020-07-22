@@ -1,7 +1,7 @@
 <header>
   <nav class="navbar navbar-expand-lg navigation navbar-light bg-light">
     <%= link_to root_path, class: 'navbar-brand' do %>
-      <%= image_tag 'top.png', size: '400x100' %>
+      <%= image_tag 'log.png' %>
     <% end %>
     
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -14,24 +14,20 @@
           <div class="dropdown-menu dropdown-menu-right">
             <%= link_to '動画一覧ページ', '#', class: 'dropdown-item' %>
             <%= link_to '動画作成', '#', class: 'dropdown-item' %>
+            
           </div>
         </li>
 
         <li class="nav-item">
           <%= link_to 'いいね！', '#', class: 'nav-link' %>
         </li>
+        
+        <li class="nav-item">
+          <%= link_to 'プロフィール', '#', class: 'dropdown-item' %>
+        </li>
 
-        <li class="nav-item dropdown dropdown-slide">
-          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="header-profile">
-            
-          </a>
-          <div class="dropdown-menu dropdown-menu-right">
-            <div class="dropdown-item">User.name</div>
-            <div class="dropdown-divider"></div>
-            <%= link_to 'プロフィール', '/profile', class: 'dropdown-item' %>
-
-            <%= link_to 'ログアウト', logout_path, class: 'dropdown-item', method: :delete %>
-          </div>
+        <li class="nav-itme">
+          <%= link_to 'ログアウト', logout_path, class: 'dropdown-item', method: :delete %>
         </li>
       </ul>
     </div>

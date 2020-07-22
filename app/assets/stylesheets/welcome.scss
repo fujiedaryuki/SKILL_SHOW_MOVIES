@@ -2,24 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.top-wrapper {
-    background-color:#33FFFF ;
-    height: calc(100vh - 134px);
-    position: relative;
-    background-position: center;
-  
-    .top-inner-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 100%;
-      text-align: center;
-      font-size: 3rem;
-      color: white;
-  
-      @media screen and (max-width: 767px) {
-        font-size: 2.0rem;
-      }
-    }
+.video-wrap {
+  background-color:#000000;
+  text-align: center;
+}
+h1 {
+  font-family: serif;          
+  color: #fff;
+  font-size: 400%;
+  position: absolute;
+  left: 30%;
+  top: 500px;
+  z-index: 1;
 }
