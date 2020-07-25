@@ -1,16 +1,29 @@
-<header>
-  <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+<header class="navi"> 
+  <div class="el_humburger">
+    <div class="el_humburger_wrapper">
+      <span class="el_humburger_bar top"></span>
+      <span class="el_humburger_bar middle"></span>
+      <span class="el_humburger_bar bottom"><p>MENU</p></span>
+    </div>
+  </div>
+ 
+    <div class="navi_inner">
+      <div class="navi_item"><%= link_to 'トップページ', root_path %></div>
+      <div class="navi_item"><%= link_to '動画一覧ページ', videos_path %></div>
+      <div class="navi_item"><%= link_to 'ログイン', login_path %></div>
+      <div class="navi_item"><%= link_to '登録ページへ', new_user_path %></div>
+    </div>
+</header>
+ 
+  <nav class="navbar navbar-expand-lg navigation navbar-light bg-light">
     <%= link_to root_path, class: 'navbar-brand' do %>
       <%= image_tag 'log.png' %>
-    <% end %>  
-    <div class="dropdown">
-      <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">メニュー</button>
-      <ul class="dropdown-menu">
-        <li><%= link_to 'トップページ', root_path %></li>
-        <li><%= link_to '動画一覧ページ', '#' %></li>
-        <li><%= link_to 'ログイン', login_path %></li>
-        <li><%= link_to '登録ページへ', new_user_path %></li>
-      </ul>
-    </div>
-  </nav> 
-</header>
+    <% end %>
+  </nav>
+ 
+
+<script
+src="https://code.jquery.com/jquery-2.2.4.min.js"
+integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+crossorigin="anonymous"></script>
+
