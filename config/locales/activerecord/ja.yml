@@ -7,4 +7,8 @@ ja:
         password_confirmation: 'パスワード確認'
         last_name: '姓'
         first_name: '名'
+      video:
+        title: '動画タイトル'
+        body: '詳細'
+        video_image: '投稿動画'
  
