@@ -21,6 +21,8 @@ class VideosController < ApplicationController
 
   def show
     @video = Video.find(params[:id])
+    @comment = Comment.new
+    @comments = @video.comments.includes(:user).order(created_at: :desc)
   end
 
   private

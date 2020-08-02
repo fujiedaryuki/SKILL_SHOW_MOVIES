@@ -11,4 +11,4 @@ ja:
       rmagick_processing_error: "rmagickがファイルを処理できませんでした。動画を確認してください。エラーメッセージ: %{e}"
       mini_magick_processing_error: "MiniMagickがファイルを処理できませんでした。動画を確認してください。エラーメッセージ: %{e}"
       min_size_error: "を%{min_size}以上のサイズにしてください"
-      max_size_error: "を%{max_size}以下のサイズにしてください
+      max_size_error: "を%{max_size}以下のサイズにしてください"

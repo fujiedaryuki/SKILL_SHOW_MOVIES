@@ -1,0 +1,35 @@
+<% content_for '動画作成'%>
+<div class="container pt-5">
+  <div class="row mb-3">
+    <div class="col-lg-8 offset-lg-2">
+      <article class="card">
+        <div class="card-body">
+          <div class='row'>
+            <div class='col-md-12'>
+              <%= video_tag @video.video_image.url, class: 'card-img-top img-fluid', size: '300x200', controls: true, autobuffer: true %>
+            </div>
+            <div class='col-md-9'>
+              <h3 class="d-inline"><%= @video.title %></h3>
+              <ul class="list-inline">
+                <li class="list-inline-item"><%= @video.user.decorate.full_name %></li>
+                <li class="list-inline-item"><%= l @video.created_at, format: :long  %></li>
+              </ul>
+            </div>
+          </div>
+          <p><%= simple_format(@video.body) %></p>
+        </div>
+      </article>
+    </div>
+  </div>
+  <div class="container pt-5">
+  <div class="row mb-3">
+    <div class="col-lg-8 offset-lg-2">
+      <%= form_with(model: [@video, @comment], remote: true) do |f| %>
+        <%= f.label :body, 'コメント投稿'%>
+        <%= f.text_area :body, class: "form-control mb-3", placeholder: "コメント" , rows: "4" %>
+        <%= f.submit 'コメント投稿',  class: "btn btn-primary rounded-pill" %>
+      <% end %>
+    </div>
+  </div>
+  <%= render 'comments/comments', { comments: @comments } %>
+</div>
