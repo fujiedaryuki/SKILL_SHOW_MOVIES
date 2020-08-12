@@ -12,17 +12,17 @@
 
 ActiveRecord::Schema.define(version: 2020_08_01_115525) do
 
-  create_table "comments", force: :cascade do |t|
+  create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "body", null: false
-    t.integer "user_id", null: false
-    t.integer "video_id", null: false
+    t.bigint "user_id", null: false
+    t.bigint "video_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_comments_on_user_id"
     t.index ["video_id"], name: "index_comments_on_video_id"
   end
 
-  create_table "users", force: :cascade do |t|
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", null: false
     t.string "crypted_password"
     t.string "salt"
@@ -33,14 +33,17 @@ ActiveRecord::Schema.define(version: 2020_08_01_115525) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
-  create_table "videos", force: :cascade do |t|
+  create_table "videos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
     t.text "body", null: false
-    t.integer "user_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "video_image"
     t.index ["user_id"], name: "index_videos_on_user_id"
   end
 
+  add_foreign_key "comments", "users"
+  add_foreign_key "comments", "videos"
+  add_foreign_key "videos", "users"
 end

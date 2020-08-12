@@ -8,7 +8,6 @@ class VideosController < ApplicationController
     @video = Video.new
   end
 
-
   def create
     @video = current_user.videos.build(video_params)
     if @video.save
@@ -23,6 +22,27 @@ class VideosController < ApplicationController
     @video = Video.find(params[:id])
     @comment = Comment.new
     @comments = @video.comments.includes(:user).order(created_at: :desc)
+  end
+
+  def edit
+    @video = current_user.videos.find(params[:id])
+  end
+
+  def update
+    @video = current_user.videos.find(params[:id])
+    if @video.update(video_params)
+      redirect_to video_path, success: '更新しました'
+    else
+      flash.now['danger'] = '更新に失敗'
+      render :edit
+    end
+
+  end
+   
+  def destroy
+    @video = current_user.videos.find(params[:id])
+    @video.destroy!
+    redirect_to videos_path, success: '削除しました'
   end
 
   private
