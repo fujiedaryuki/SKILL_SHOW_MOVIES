@@ -6,10 +6,7 @@ Rails.application.routes.draw do
   post 'login', to: 'user_sessions#create'
   delete 'logout', to: 'user_sessions#destroy'
   resources :users, only: %i[new create]
-  resources :videos,  shallow: true do
+  resources :videos do
     resources :comments, only: %i[create edit update destroy], shallow: true
   end
-
-  
-
 end

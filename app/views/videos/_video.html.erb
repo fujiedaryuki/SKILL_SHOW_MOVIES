@@ -4,14 +4,9 @@
     <%= video_tag video.video_image_url, class: 'card-img-top', size: '300x200', controls: true, autobuffer: true %>
       <div class="card-body">
         <h4 class="card-title">
-          <a href="#">
-            <%= link_to video.title, video_path(video)%>
-          </a>
+          <%= link_to video.title, video_path(video)%>
         </h4>
-        <div class='mr10 float-right'>
-          <a href="#"><%= icon 'fas', 'trash', class: 'pr-1' %></a>
-          <a href="#"><%= icon 'fa', 'pen' %></a>
-        </div>
+        <%= render 'crud_menus', video: video if current_user.own?(video)%>
         <ul class="list-inline">
           <li class="list-inline-item">
             <%= icon 'far', 'user' %>

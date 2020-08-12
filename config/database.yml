@@ -5,21 +5,40 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: sqlite3
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  timeout: 5000
+  adapter: mysql2
+  database: skill_show_movies
+  user: root
+  password: root
+  host: 127.0.0.1 
+  port: 3357
 
 development:
   <<: *default
-  database: db/development.sqlite3
+  adapter: mysql2
+  database: skill_show_movies
+  user: root
+  password: root
+  host: 127.0.0.1 
+  port: 3357
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: db/test.sqlite3
+  adapter: mysql2
+  database: skill_show_movies_
+  user: root
+  password: root
+  host: localhost
+  port: 3357
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  adapter: mysql2
+  database: skill_show_movies
+  user: root
+  password: Ryuki@125
+  host: 127.0.0.1
+  port: 3357
+  socket: /var/lib/mysql/mysql.sock
