@@ -36,13 +36,16 @@ class VideosController < ApplicationController
       flash.now['danger'] = '更新に失敗'
       render :edit
     end
-
   end
-   
+
   def destroy
     @video = current_user.videos.find(params[:id])
     @video.destroy!
     redirect_to videos_path, success: '削除しました'
+  end
+
+  def likes
+    @like_videos = current_user.like_videos.includes(:user).order(created_at: :desc)
   end
 
   private

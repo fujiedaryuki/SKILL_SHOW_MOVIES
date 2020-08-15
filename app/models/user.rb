@@ -7,10 +7,26 @@ class User < ApplicationRecord
   
   has_many :videos, dependent: :destroy
   has_many :comments, dependent: :destroy
+  has_many :likes, dependent: :destroy
+  has_many :like_videos, through: :likes, source: :video
   validates :email, uniqueness: true
+
 
   def own?(object)
     id == object.user_id
+  end
+
+  def like(video)
+    like_videos << video
+  end
+
+  def notlike(video)
+    like_videos.destroy(video)
+  end
+
+
+  def like?(video)
+    like_videos.include?(video)
   end
  
 end
