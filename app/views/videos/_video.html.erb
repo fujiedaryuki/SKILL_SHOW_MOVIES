@@ -6,7 +6,11 @@
         <h4 class="card-title">
           <%= link_to video.title, video_path(video)%>
         </h4>
-        <%= render 'crud_menus', video: video if current_user.own?(video)%>
+        <% if current_user.own?(video) %>
+          <%= render 'crud_menus', video: video%>
+        <% else %>
+          <%= render 'like_button', video: video  %>
+        <% end %>
         <ul class="list-inline">
           <li class="list-inline-item">
             <%= icon 'far', 'user' %>

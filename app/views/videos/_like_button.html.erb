@@ -1,0 +1,5 @@
+<% if current_user.like?(video) %>
+  <%= render 'unbookmark', { video: video } %>
+<% else %>
+  <%= render 'like', { video: video } %>
+<% end %>

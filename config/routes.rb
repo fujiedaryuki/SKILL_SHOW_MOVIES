@@ -8,5 +8,9 @@ Rails.application.routes.draw do
   resources :users, only: %i[new create]
   resources :videos do
     resources :comments, only: %i[create edit update destroy], shallow: true
+    collection do
+      get :likes
+    end
   end
+  resources :likes, only: %i[create destroy]
 end
