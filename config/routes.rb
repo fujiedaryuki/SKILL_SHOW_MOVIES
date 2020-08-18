@@ -9,8 +9,10 @@ Rails.application.routes.draw do
   resources :videos do
     resources :comments, only: %i[create edit update destroy], shallow: true
     collection do
+      get :my_videos
       get :likes
     end
   end
   resources :likes, only: %i[create destroy]
+  resource :profile, only: %i[show edit update]
 end

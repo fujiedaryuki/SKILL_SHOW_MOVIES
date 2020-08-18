@@ -7,9 +7,9 @@
           <%= link_to video.title, video_path(video)%>
         </h4>
         <% if current_user.own?(video) %>
-          <%= render 'crud_menus', video: video%>
+          <%= render 'crud_menus', video: video %>
         <% else %>
-          <%= render 'like_button', video: video  %>
+          <%= render 'like_button', video: video %>
         <% end %>
         <ul class="list-inline">
           <li class="list-inline-item">
