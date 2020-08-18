@@ -48,6 +48,10 @@ class VideosController < ApplicationController
     @like_videos = current_user.like_videos.includes(:user).order(created_at: :desc)
   end
 
+  def my_videos
+    @videos = current_user.videos.order(created_at: :desc)
+  end
+
   private
 
   def video_params
