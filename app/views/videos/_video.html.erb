@@ -13,12 +13,17 @@
         <% end %>
         <ul class="list-inline">
           <li class="list-inline-item">
-            <%= icon 'far', 'user' %>
-            <%= video.user.decorate.full_name %>
+            <i class="fas fa-running">
+              <%= video.user.decorate.full_name %>
+            </i>
           </li>
           <li class="list-inline-item">
-            <%= icon 'far', 'calendar' %>
-            <%= l video.created_at, format: :long %>
+            <i class="fas fa-calendar-alt">
+              <%= l video.created_at, format: :long %>
+            </i>
+          </li>
+          <li class="list-inline-item">
+            <%= render 'stars', video: video %>
           </li>
         </ul>
         <p class="card-text"><%= video.body %></p>

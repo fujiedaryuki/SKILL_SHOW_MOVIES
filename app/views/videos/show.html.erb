@@ -12,8 +12,9 @@
             <div class='col-md-9'>
               <h3 class="d-inline"><%= @video.title %></h3>
               <ul class="list-inline">
-                <li class="list-inline-item"><%= @video.user.decorate.full_name %></li>
-                <li class="list-inline-item"><%= l @video.created_at, format: :long  %></li>
+                <li><i class="far fa-user"><%= @video.user.decorate.full_name %></i></li>
+                <li><i class="far fa-calendar-alt"><%= l @video.created_at, format: :long  %></i></li>
+                <li><%= render 'star', video: @video %></li>
               </ul>
             </div>
           </div>
