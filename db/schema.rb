@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_16_045658) do
+ActiveRecord::Schema.define(version: 2020_08_18_101932) do
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "body", null: false
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 2020_08_16_045658) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "video_image"
+    t.float "rate", default: 0.0, null: false
     t.index ["user_id"], name: "index_videos_on_user_id"
   end
 
