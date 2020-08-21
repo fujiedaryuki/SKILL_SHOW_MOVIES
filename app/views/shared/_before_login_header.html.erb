@@ -1,29 +1,34 @@
-<header class="navi"> 
-  <div class="el_humburger">
-    <div class="el_humburger_wrapper">
-      <span class="el_humburger_bar top"></span>
-      <span class="el_humburger_bar middle"></span>
-      <span class="el_humburger_bar bottom"><p>MENU</p></span>
-    </div>
-  </div>
- 
-    <div class="navi_inner">
-      <div class="navi_item"><%= link_to 'トップページ', root_path %></div>
-      <div class="navi_item"><%= link_to '動画一覧ページ', videos_path %></div>
-      <div class="navi_item"><%= link_to 'ログイン', login_path %></div>
-      <div class="navi_item"><%= link_to '登録ページへ', new_user_path %></div>
-    </div>
-</header>
- 
+<header>
   <nav class="navbar navbar-expand-lg navigation navbar-light bg-light">
+
     <%= link_to root_path, class: 'navbar-brand' do %>
       <%= image_tag 'log.png' %>
     <% end %>
-  </nav>
- 
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-<script
-src="https://code.jquery.com/jquery-2.2.4.min.js"
-integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-crossorigin="anonymous"></script>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto main-nav align-items-center">
+        <li class="nav-item dropdown dropdown-slide">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-chevron-circle-down"> メニュー</i>
+          </a>
+
+          <div class="dropdown-menu dropdown-menu-right">
+            <%= link_to  root_path, class: 'dropdown-item' do %>
+              <i class="fas fa-desktop"> トップページ</i>
+            <% end %>
+            <%= link_to  new_user_path, class: 'dropdown-item' do %>
+              <i class="fas fa-users"> ユーザー登録</i>
+            <% end %>
+            <%= link_to login_path, class: 'dropdown-item' do %>
+              <i class="fas fa-chalkboard-teacher">  ログイン</i>
+            <% end %>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
 
