@@ -45,7 +45,8 @@ gem 'pry-byebug'
 gem 'rails-i18n'
 gem 'draper', '3.1.0'
 gem 'carrierwave'
-
+gem 'kaminari'
+gem 'ransack'
 
 
 group :development, :test do
