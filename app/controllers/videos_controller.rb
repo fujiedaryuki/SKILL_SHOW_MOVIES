@@ -1,7 +1,8 @@
 class VideosController < ApplicationController
   skip_before_action :require_login, only: %i[index]
   def index
-    @videos = Video.all.includes(:user).order(created_at: :desc)
+    @q = Video.ransack(params[:q])
+    @videos = @q.result(distinct: true).includes(:user).order(created_at: :desc).page(params[:page])
   end
 
   def new
@@ -45,11 +46,13 @@ class VideosController < ApplicationController
   end
 
   def likes
-    @like_videos = current_user.like_videos.includes(:user).order(created_at: :desc)
+    @q =  current_user.like_videos.ransack(params[:q])
+    @like_videos = @q.result(distinct: true).includes(:user).order(created_at: :desc).page(params[:page])
   end
 
   def my_videos
-    @videos = current_user.videos.order(created_at: :desc)
+    @q =  current_user.videos.ransack(params[:q])
+    @videos = @q.result(distinct: true).order(created_at: :desc).page(params[:page])
   end
 
   private
