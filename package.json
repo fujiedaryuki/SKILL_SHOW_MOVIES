@@ -1,5 +1,7 @@
 {
   "name": "skill_show_movies",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "admin-lte": "^3.0.5"
+  }
 }

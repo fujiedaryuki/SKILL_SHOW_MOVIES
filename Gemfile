@@ -47,6 +47,7 @@ gem 'draper', '3.1.0'
 gem 'carrierwave'
 gem 'kaminari'
 gem 'ransack'
+gem 'enum_help'
 
 
 group :development, :test do
