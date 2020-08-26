@@ -1,0 +1,40 @@
+<% content_for(:title, '投稿動画詳細') %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+      <h1>投稿動画詳細</h1>
+      <div class="text-right mb-3">
+        <%= link_to '編集', edit_admin_video_path(@videos), class: 'btn btn-success' %> 
+        <%= link_to '削除', admin_video_path(@videos), method: :delete, data: { confirm: '削除しますか？' }, class: 'btn btn-danger' %>
+      </div>
+      <table class="table table-bordered bg-white">
+        <tbody>
+          <tr>
+            <th scope="row">ID</th>
+            <td><%= @videos.id %></td>
+          </tr>
+          <tr>
+            <th scope="row">動画タイトル</th>
+            <td><%= @videos.title %></td>
+          </tr>
+          <tr>
+            <th scope="row">作成者</th>
+            <td><%= @videos.user.decorate.full_name %></td>
+          </tr>
+          <tr>
+            <th scope="row">詳細</th>
+            <td><%= @videos.body %></td>
+          </tr>
+          <tr>
+            <th scope="row">動画評価</th>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">作成日時</th>
+            <td><%= l @videos.created_at, format: :long %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

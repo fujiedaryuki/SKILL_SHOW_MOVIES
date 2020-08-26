@@ -11,7 +11,7 @@
     )
 end
 
-50.times do |index|
+20.times do |index|
     Video.create(
         user: User.offset(rand(User.count)).first,
         title: "タイトル#{index}",

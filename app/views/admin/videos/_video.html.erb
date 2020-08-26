@@ -1,0 +1,18 @@
+<tr>
+  <td>
+    <%= video.id %>
+  </td>
+  <td>
+    <%= link_to video.title, admin_video_path(video) %>
+  </td>
+  <td>
+    <%= video.user.decorate.full_name %>
+  </td>
+  <td>
+    <%= l video.created_at, format: :long %>
+  </td>
+  <td>
+    <%= link_to '編集', edit_admin_video_path(video), class: 'btn btn-success' %>
+    <%= link_to '削除', admin_video_path(video), method: :delete, data: { confirm: '削除します' }, class: 'btn btn-danger' %>
+  </td>
+</tr>

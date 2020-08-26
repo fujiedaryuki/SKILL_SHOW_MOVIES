@@ -1,0 +1,42 @@
+<% content_for(:title, '動画編集') %>
+<div class="container">
+  <div class="row">
+    <%= form_with model: @videos, url: admin_video_path,  local: true do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+      <div class="form-group">
+        <%= video_tag @videos.video_image.url,
+                              id: 'preview',
+                              class: 'card-img-top img-fluid', size: '300x200',  controls: true, autobuffer: true %>
+      </div>
+      <div class="form-group">
+        <%= f.label :video_image %>
+        <%= f.file_field :video_image, onchange: 'previewFileWithId(preview)', class: 'form-control mb-3', accept: 'video/*' %>
+        <%= f.hidden_field :video_image_cache %>
+      </div>
+      <div class="form-group"> 
+        <%= f.label :title %>
+        <%= f.text_field :title, class: 'form-control' %>
+      </div>
+      <div class="form-group" id="star">
+        <%= f.label :rate %>
+        <%= f.hidden_field :rate, id: :review_star %>
+      </div>
+      <div class="form-group">
+        <%= f.label :body %>
+        <%= f.text_area :body, class: 'form-control', rows: "4" %>
+     </div>
+     <%= f.submit class: 'btn btn-primary' %>
+    <% end %> 
+  </div>
+</div>
+
+<script>
+$('#star').raty({
+  size     : 20,
+  starOff:  '<%= asset_path('star-off.png') %>',
+  starOn : '<%= asset_path('star-on.png') %>',
+  starHalf: '<%= asset_path('star-half.png') %>',
+  scoreName: 'video[rate]',
+  half: true,
+});
+</script>  
