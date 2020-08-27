@@ -18,7 +18,8 @@
           </div>
         <% end %>
         <div class='text-center'>
-          <%= link_to '登録ページへ', new_user_path %>
+          <%= link_to '登録ページへ', new_user_path,  class: 'btn btn-primary'%>
+          <%= link_to 'ゲストユーザー', guest_path, method: :post, class: 'btn btn-success' %>
         </div>
       </div>
     </div>

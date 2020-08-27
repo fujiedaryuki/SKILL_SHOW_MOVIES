@@ -1,6 +1,7 @@
 class ProfilesController < ApplicationController
   before_action :set_user, only: %i[edit update]
-   
+  before_action :new_guest, only: %i[update]
+
   def edit; end
  
   def update
@@ -11,7 +12,7 @@ class ProfilesController < ApplicationController
       render :edit
     end
   end
- 
+
   def show; end
  
   private
@@ -19,8 +20,15 @@ class ProfilesController < ApplicationController
   def set_user
     @user = User.find(current_user.id)
   end
+
  
   def user_params
     params.require(:user).permit(:email, :last_name, :first_name, :avatar)
   end
+
+  def new_guest
+    if current_user == User.find_by(email: 'test@example.com')
+      redirect_to profile_path, success:'ログインが必要です'
+    end
+ end
 end
