@@ -13,9 +13,7 @@ class User < ApplicationRecord
   has_many :like_videos, through: :likes, source: :video
 
 
-
   enum role: { general: 0, admin: 1 }
-
 
   def own?(object)
     id == object.user_id

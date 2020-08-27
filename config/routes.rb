@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
+  
   get 'users/new'
   get 'users/create'
   root 'welcome#top'
   get 'login', to: 'user_sessions#new'
   post 'login', to: 'user_sessions#create'
+  post 'guest', to: 'user_sessions#new_guest'
+
   delete 'logout', to: 'user_sessions#destroy'
   resources :users, only: %i[new create]
   resources :videos do
