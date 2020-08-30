@@ -11,18 +11,18 @@
         <% else %>
           <%= render 'like_button', video: video %>
         <% end %>
-        <ul class="list-inline">
-          <li class="list-inline-item">
+        <ul class="card-text">
+          <li class="card-item">
             <i class="fas fa-running">
               <%= video.user.decorate.full_name %>
             </i>
           </li>
-          <li class="list-inline-item">
+          <li class="card-item">
             <i class="fas fa-calendar-alt">
               <%= l video.created_at, format: :long %>
             </i>
           </li>
-          <li class="list-inline-item">
+          <li class="card-item">
             <%= render 'stars', video: video %>
           </li>
         </ul>

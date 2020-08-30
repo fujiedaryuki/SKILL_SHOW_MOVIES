@@ -1,5 +1,5 @@
 <div id="star-rate-<%= video.id %>"
-  <i class="fas fa-futbol">個人の評価：<%= video.rate %></i>
+  <i class="fas fa-futbol"> 個人の評価：<%= video.rate %></i>
 </div>
 
 <script>
@@ -10,6 +10,6 @@
     starHalf: '<%= asset_path('star-half.png') %>',
     half: true,
     readOnly: true,
-    score: <%= video.rate %>,
+    score: <%= video.rate %>
   });
 </script>
