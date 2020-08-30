@@ -14,7 +14,7 @@
   .welcome-inner-text h1 {
     font-size: 90px;
     font-family: Impact;
-    color: #ffa500;
+    color: #ffa54c;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -36,3 +36,193 @@
   border-radius: 15px;   
 }
 
+.lesssonOne {
+  display: flex;
+  justify-content: space-around;
+  background-color: #232323;
+  padding: 40px;
+}
+
+.lesssonOne_item {
+  background-color:#eaeaea;
+  opacity: 0.8;
+  padding: 10px;
+  width: 30%;
+  height: 500px;
+  text-align: center;
+  transition: all 0.5s;
+
+  .lesssonOne_item h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+  }
+
+  .lesssonOne_item p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  }
+}
+
+.lesssonOne_item:hover {
+  background-color: #99ff99;
+}
+
+
+.icon{
+  padding: 50px 0;
+  font-size: 100px;
+  transition: all 0.5s;
+  color:#000000;
+}
+
+/* ここから下　*/
+
+
+.lesssonTwo{
+  display: flex;
+  justify-content: space-around;
+  background-color: #232323;
+  padding: 40px;
+}
+
+.lesssonTwo_item {
+  background-color:#eaeaea;
+  opacity: 0.8;
+  padding: 10px;
+  width: 30%;
+  height: 500px;
+  text-align: center;
+  transition: all 0.5s;
+
+
+  .lesssonTwo_item h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+  }
+
+  .lesssonTwo_item p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  }
+}
+
+
+.lesssonTwo_item:hover {
+  background-color: #99ff99;
+}
+
+.font {
+  color:#000000;
+}
+
+/*  ここからfooter */
+
+.cover {
+  height: 280px;
+  width: 100%;
+  opacity: 0.8;
+  background-image: url('footer.png');
+  background-size: cover;
+  background-color: #2f4f4f;
+}
+
+/* mycontent */
+
+.mycontent {
+  display: flex;
+  justify-content: space-around;
+  background-color:#232323;
+  padding: 40px;
+}
+
+.mycontent_item  {
+  background-color:#fdfdfd;
+  opacity: 0.8;
+  padding: 10px;
+  width: 30%;
+  height: 500px;
+  text-align: center;
+  transition: all 0.5s;
+}
+
+.mycontent_item h2  {
+  font-family: Impact;
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.mycontent_item h3 {
+  display: block;
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+
+.mycontent_item_text  p {
+  font-family: Impact;
+}
+
+.git-icon {
+  font-size: 150px;
+  color:#000000;
+}
+
+.myimage{
+  width: 200px;
+  height: 200px;
+  border-radius: 50px;
+}
+
+/*　company */
+
+.company {
+  font-family: 'Silom',sans-serif;
+  height: 100px;
+  width: 100%;
+  background-color:#000000;
+}
+
+.company-log {
+  line-height: 100px;
+  text-align: center;
+  color: #ffa54c;
+  font-weight: lighter;
+  transition: all 0.5s;
+}
+
+
+
+.body {
+  background-color:#2f2f2f;
+  color:#ffa54c; 
+}
+/* header */
+.meun-h1  {
+  font-family: Impact;
+  color: #ffa54c;
+}

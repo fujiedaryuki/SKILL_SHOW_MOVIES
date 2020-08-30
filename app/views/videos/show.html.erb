@@ -10,15 +10,15 @@
               <%= video_tag @video.video_image.url, class: 'card-img-top img-fluid', size: '300x200', controls: true, autobuffer: true %>
             </div>
             <div class='col-md-9'>
-              <h3 class="d-inline"><%= @video.title %></h3>
-              <ul class="list-inline">
-                <li><i class="far fa-user"><%= @video.user.decorate.full_name %></i></li>
-                <li><i class="far fa-calendar-alt"><%= l @video.created_at, format: :long  %></i></li>
-                <li><%= render 'star', video: @video %></li>
+              <h4 class="card-title"><%= @video.title %></h4>
+              <ul class="card-text">
+                <li class="card-item"><i class="far fa-user"><%= @video.user.decorate.full_name %></i></li>
+                <li class="card-item"><i class="far fa-calendar-alt"><%= l @video.created_at, format: :long  %></i></li>
+                <li class="card-item"><%= render 'star', video: @video %></li>
               </ul>
             </div>
           </div>
-          <p><%= simple_format(@video.body) %></p>
+          <p><%= simple_format(@video.body, class: 'card-item') %></p>
         </div>
       </article>
     </div>
