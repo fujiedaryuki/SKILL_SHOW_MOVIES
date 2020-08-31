@@ -14,7 +14,6 @@
               <ul class="card-text">
                 <li class="card-item"><i class="far fa-user"><%= @video.user.decorate.full_name %></i></li>
                 <li class="card-item"><i class="far fa-calendar-alt"><%= l @video.created_at, format: :long  %></i></li>
-                <li class="card-item"><%= render 'star', video: @video %></li>
               </ul>
             </div>
           </div>

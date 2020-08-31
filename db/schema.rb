@@ -52,7 +52,6 @@ ActiveRecord::Schema.define(version: 2020_08_23_042542) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "video_image"
-    t.float "rate", default: 0.0, null: false
     t.index ["user_id"], name: "index_videos_on_user_id"
   end
 
