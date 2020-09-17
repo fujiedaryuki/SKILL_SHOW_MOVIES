@@ -5,7 +5,9 @@ ruby '2.6.4'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 # Use sqlite3 as the database for Active Record
+
 gem 'mysql2'
+
 
 #gem 'uninstall', 'mysql2'
 # Use Puma as the app server
@@ -48,7 +50,7 @@ gem 'carrierwave'
 gem 'kaminari'
 gem 'ransack'
 gem 'enum_help'
-
+gem 'dotenv-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -72,6 +74,10 @@ group :development do
   gem 'pry-doc'
   gem 'rubocop'
   gem 'rails_best_practices'
+end
+
+group :production, :staging do
+  gem 'unicorn'
 end
 
 

@@ -27,7 +27,7 @@ development:
 test:
   <<: *default
   adapter: mysql2
-  database: skill_show_movies_
+  database: skill_show_movies
   user: root
   password: root
   host: localhost
@@ -36,9 +36,10 @@ test:
 production:
   <<: *default
   adapter: mysql2
-  database: skill_show_movies
-  user: root
-  password: Ryuki@125
-  host: 127.0.0.1
-  port: 3357
-  socket: /var/lib/mysql/mysql.sock
+  database: skill-show-movies 
+  username: <%= ENV['USER_NAME'] %>
+  password: <%= ENV['PASSWORD_PRODUCTION'] %>
+  host: <%= ENV['DATABASE_HOST'] %>
+  port: 3306
+
+ 
