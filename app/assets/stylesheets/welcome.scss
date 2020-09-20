@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .welcome {
-  background-image: url('soccer.png');
+  background-image: image-url('soccer.png');
   background-size: cover;
   background-blend-mode:lighten;
   background-position: center top;
@@ -137,7 +137,7 @@
   height: 280px;
   width: 100%;
   opacity: 0.8;
-  background-image: url('footer.png');
+  background-image: image-url('footer.png');
   background-size: cover;
   background-color: #2f4f4f;
 }
