@@ -28,7 +28,7 @@ class ProfilesController < ApplicationController
 
   def new_guest
     if current_user == User.find_by(email: 'test@example.com')
-      redirect_to profile_path, success:'ログインが必要です'
+      redirect_to profile_path, success:'テストユーザーは変更できません。ログインが必要です'
     end
  end
 end
