@@ -30,5 +30,5 @@ class User < ApplicationRecord
   def like?(video)
     like_videos.include?(video)
   end
- 
+
 end
