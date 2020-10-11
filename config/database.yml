@@ -30,7 +30,7 @@ test:
   database: skill_show_movies
   user: root
   password: root
-  host: localhost
+  host: 127.0.0.1 
   port: 3357
 
 production:
