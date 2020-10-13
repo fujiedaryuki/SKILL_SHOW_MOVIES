@@ -1,5 +1,5 @@
 class VideosController < ApplicationController
-  skip_before_action :require_login, only: %i[index]
+  
   def index
     @q = Video.ransack(params[:q])
     @videos = @q.result(distinct: true).includes(:user).order(created_at: :desc).page(params[:page])
