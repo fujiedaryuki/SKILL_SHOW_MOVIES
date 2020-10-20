@@ -3,15 +3,16 @@ class ProfilesController < ApplicationController
   before_action :new_guest, only: %i[update]
 
   def edit; end
- 
+
   def update
     if @user.update(user_params)
-      redirect_to profile_path, success: 'プロフィールを更新'
+      redirect_to profile_path, success: 'プロフィールを更新しました！'
     else
-      flash.now['danger'] =　'プロフィールを更新に失敗'
+      flash.now[:danger] = 'プロフィールの更新に失敗' 
       render :edit
     end
   end
+
 
   def show; end
  
