@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :comment do
     body { "MyText" }
-    user { nil }
-    video { nil }
+    user_id { user.id }
+    video_id { video.id }
   end
 end

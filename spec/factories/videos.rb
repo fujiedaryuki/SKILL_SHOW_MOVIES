@@ -5,3 +5,4 @@ FactoryBot.define do
     video_image { nil }
   end
 end
+
