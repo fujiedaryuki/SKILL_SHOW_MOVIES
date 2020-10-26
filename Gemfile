@@ -63,6 +63,7 @@ end
 group :test do 
   gem 'capybara'
   gem 'webdrivers'
+  gem 'shoulda-matchers'
 end
 
 group :development do
