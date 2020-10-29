@@ -13,7 +13,7 @@
   h1 {
     font-size: 90px;
     font-family: Impact;
-    color: #ffa54c;
+    color: #7fffff;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -38,12 +38,12 @@
 .lesssonOne {
   display: flex;
   justify-content: space-around;
-  background-color: #232323;
+  background-color: #fafafa;
   padding: 40px;
 }
 
 .lesssonOne_item {
-  background-color:#eaeaea;
+  background-color:#c6c6c6;
   opacity: 0.8;
   padding: 10px;
   width: 30%;
@@ -71,7 +71,7 @@
 }
 
 .lesssonOne_item:hover {
-  background-color: #99ff99;
+  background-color:#a3ffff;
 }
 
 
@@ -88,12 +88,12 @@
 .lesssonTwo{
   display: flex;
   justify-content: space-around;
-  background-color: #232323;
+  background-color: #ffffff;
   padding: 40px;
 }
 
 .lesssonTwo_item {
-  background-color:#eaeaea;
+  background-color:#c6c6c6;
   opacity: 0.8;
   padding: 10px;
   width: 30%;
@@ -123,7 +123,7 @@
 
 
 .lesssonTwo_item:hover {
-  background-color: #99ff99;
+  background-color:#a3ffff;
 }
 
 .font {
@@ -145,12 +145,12 @@
 .mycontent {
   display: flex;
   justify-content: space-around;
-  background-color:#232323;
+  background-color:#ffffff;
   padding: 40px;
 }
 
 .mycontent_item  {
-  background-color:#fdfdfd;
+  background-color:#ffffff;
   opacity: 0.8;
   padding: 10px;
   width: 30%;
@@ -202,13 +202,13 @@
   font-family: 'Silom',sans-serif;
   height: 100px;
   width: 100%;
-  background-color:#000000;
+  background-color: #7fffff;
 }
 
 .company-log {
   line-height: 100px;
   text-align: center;
-  color: #ffa54c;
+  color: #000000;
   font-weight: lighter;
   transition: all 0.5s;
 }
@@ -216,11 +216,11 @@
 
 
 .body {
-  background-color:#2f2f2f;
-  color:#ffa54c; 
+  background-color:	 #ffffff;
+  color:#000000; 
 }
 /* header */
 .meun-h1  {
-  font-family: Impact;
-  color: #ffa54c;
+  font-family: 'Montserrat Subrayada', sans-serif;
+  color:#202020;
 }
