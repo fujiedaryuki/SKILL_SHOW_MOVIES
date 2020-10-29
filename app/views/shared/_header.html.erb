@@ -6,40 +6,34 @@
       </h1>
     <% end %>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto main-nav align-items-center">
+      <li class="nav-content-item">
+        <%= link_to videos_path class: 'navi-item' do %>
+          <i class="fas fa-video header-icon"> 動画一覧</i>
+        <% end %>
+      </li>
+      <li class="nav-content-item header-icon">
+        <%= link_to new_video_path, class: 'navi-item' do %>
+          <i class="fas fa-photo-video header-icon"> 投稿</i>
+        <% end %>
+      </li>
+      <li class="nav-content-item">
+        <%= link_to likes_videos_path, class: 'nav-link' do  %>
+          <i class="fas fa-thumbs-up header-icon"> いいね</i>
+        <% end %>
+      </li>
+    </ul>
+    <div class="user-profiles-iocn-imag">
       <ul class="navbar-nav ml-auto main-nav align-items-center">
-        <li class="nav-item dropdown dropdown-slide">
-          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-play-circle">  動画詳細</i>
-          </a>
-
-          <div class="dropdown-menu dropdown-menu-right">
-            <%= link_to videos_path, class: 'dropdown-item' do %>
-              <i class="fas fa-video">  投稿動画</i>
-            <% end %>
-            <%= link_to new_video_path, class: 'dropdown-item' do %>
-              <i class="fas fa-photo-video">  動画作成</i>
-            <% end %>
-          </div>
-        </li>
-
-        <li class="nav-item">
-          <%= link_to likes_videos_path, class: 'nav-link' do  %>
-            <i class="fas fa-thumbs-up"> いいね</i>
-          <% end %>
-        </li>
-
         <li class="nav-item dropdown dropdown-slide">
           <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="header-profile">
             <%= image_tag current_user.avatar_url, size: '40x40', class: 'rounded-circle mr15'%>
           </a>
           <div class="dropdown-menu dropdown-menu-right">
-            <div class="dropdown-item"><i class="fas fa-user"> <%= current_user.decorate.full_name %></i></div>
-            <div class="dropdown-divider"></div>
             <%= link_to profile_path, class: 'dropdown-item' do %>
               <i class="fas fa-address-book"> マイページ</i>
             <% end %>
-            
+
             <%= link_to  my_videos_videos_url, class: 'dropdown-item' do  %>
               <i class="fas fa-file-video"> ユーザー動画</i>
             <% end %> 
