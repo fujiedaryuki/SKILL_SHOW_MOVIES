@@ -8,18 +8,13 @@
 
     <ul class="navbar-nav ml-auto main-nav align-items-center">
       <li class="nav-content-item">
-        <%= link_to videos_path class: 'navi-item' do %>
+        <%= link_to videos_path, data: {"turbolinks" => false} , class: 'navi-item' do %>
           <i class="fas fa-video header-icon"> 動画一覧</i>
         <% end %>
       </li>
       <li class="nav-content-item header-icon">
         <%= link_to new_video_path, class: 'navi-item' do %>
           <i class="fas fa-photo-video header-icon"> 投稿</i>
-        <% end %>
-      </li>
-      <li class="nav-content-item">
-        <%= link_to likes_videos_path, class: 'nav-link' do  %>
-          <i class="fas fa-thumbs-up header-icon"> いいね</i>
         <% end %>
       </li>
     </ul>

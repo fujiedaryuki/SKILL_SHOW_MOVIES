@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/* card */
 
 .card-title h4 {
   font-size: 20px;
@@ -21,11 +22,63 @@
   color:#000000;
 }
 
-.search {
+/* sidebar */
+
+.line_right {
+  border-right: thick solid #e0e0e0;
+  padding-right: 20px;
+}
+
+.sidebar {
   margin : 0 auto;
-  padding: 20px
+  padding: 20px 40px 20px 0px;
 }
 
 .search-item {
   margin-bottom: 20px;
+}
+
+
+.side-title {
+  font-size: 1.375rem;
+  padding: 8px 8px;
+  border-bottom: 3px solid #a0a0a0;
+  font-weight: normal;
+}
+
+
+.side-menu {
+  margin-bottom: 60px;
+  list-style: none;
+  padding: 20px 0px; 
+}
+.side-menu li {
+  border-bottom: 2px #ddd solid;
+  padding: 8px;
+  display: block;
+}
+
+
+/* swiper */
+
+.btn--orange {
+  margin-bottom: 50px;
+  padding: 20px;
+  border-bottom: 4px #ddd solid;
+}
+
+.swiper-parent {
+  position: relative;
+ 
+}
+
+.swiper-container {
+	width: calc(100% - 100px);	
+	padding-bottom: 50px;
+	box-sizing: content-box;
+}
+
+.swiper-button-prev, .swiper-button-next {
+	top: calc((100% - 50px) * 0.5);	
+  margin-top: -22px;
 }

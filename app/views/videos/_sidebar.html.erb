@@ -1,0 +1,32 @@
+<div class="sidebar">
+  <div class="line_right">
+    <h6 class="side-title">メニュー</h6>
+    <%= render 'search_form', url: videos_path %>
+    <ul class="side-menu">
+      <li>
+        <%= link_to  root_path, class: 'navi-item' do %>
+          <i class="fas fa-desktop">トップページ</i>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to videos_path class: 'navi-item' do %>
+          <i class="fas fa-video header-icon"> 動画一覧</i>
+        <% end %>
+      </li>
+      <li class="nav-content-item header-icon">
+        <%= link_to new_video_path, class: 'navi-item' do %>
+          <i class="fas fa-photo-video header-icon"> 投稿</i>
+        <% end %>  
+      <li>
+        <%= link_to likes_videos_path , class: 'navi-item' do %>
+          <i class="fas fa-thumbs-up header-icon">いいね</i>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to  my_videos_videos_url, class: 'navi-item' do %>
+          <i class="fas fa-file-video"> ユーザー動画</i>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</div>
