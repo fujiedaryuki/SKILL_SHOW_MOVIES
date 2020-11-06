@@ -1,0 +1,11 @@
+<div class="card">
+  <%= video_tag video.video_image_url, class: 'card-img-top', size: '300x200', controls: true, autobuffer: true %>  
+  <div class="card-body">
+    <%= image_tag current_user.avatar_url, size: '40x40', class: 'rounded-circle mr15'%>
+    <h5 class="card-title"><%= link_to video.user.decorate.full_name, video_path(video) %></h5>
+    <p><%= video.body %></p>
+  </div>
+</div>
+
+
+

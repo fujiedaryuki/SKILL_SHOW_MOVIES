@@ -2,12 +2,11 @@
 <div class="container pt-3">
   <div class="row">
     <div class="col-lg-10 offset-lg-1">
-      <form>
-      <%= render 'search_form', url: likes_videos_path %>
     </div>
   </div>
   <div class="row">
-    <div class="col-12">
+  <%= render 'likes_sidebar' %>
+    <div class="col text-left">
       <div class="row">
         <% if @like_videos.present? %>
           <%= render @like_videos %>

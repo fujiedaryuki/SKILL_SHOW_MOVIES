@@ -38,7 +38,7 @@
 .lesssonOne {
   display: flex;
   justify-content: space-around;
-  background-color: #fafafa;
+  background-color: #F5F5F5;
   padding: 40px;
 }
 
@@ -88,7 +88,7 @@
 .lesssonTwo{
   display: flex;
   justify-content: space-around;
-  background-color: #ffffff;
+  background-color: #F5F5F5;
   padding: 40px;
 }
 
@@ -145,7 +145,7 @@
 .mycontent {
   display: flex;
   justify-content: space-around;
-  background-color:#ffffff;
+  background-color:#F5F5F5;
   padding: 40px;
 }
 
@@ -202,13 +202,13 @@
   font-family: 'Silom',sans-serif;
   height: 100px;
   width: 100%;
-  background-color: #7fffff;
+  background-color: #ffffff;
 }
 
 .company-log {
   line-height: 100px;
   text-align: center;
-  color: #000000;
+  color: #87CEFA;
   font-weight: lighter;
   transition: all 0.5s;
 }
@@ -216,11 +216,11 @@
 
 
 .body {
-  background-color:	 #ffffff;
+  background-color:	 #F5F5F5;
   color:#000000; 
 }
 /* header */
 .meun-h1  {
-  font-family: 'Montserrat Subrayada', sans-serif;
-  color:#202020;
+  font-family: 'Silom',sans-serif;
+  color:#87CEFA;
 }

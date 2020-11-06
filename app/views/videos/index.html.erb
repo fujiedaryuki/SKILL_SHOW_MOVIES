@@ -1,21 +1,23 @@
 <% content_for(:title, '投稿動画一覧') %>
-<div class="container pt-3">
-  <div class="row">
-    <div class="col-lg-10 offset-lg-1">
-      <%= render 'search_form', url: videos_path %>
-    </div>
+<div class="container">
+  <div class="swiper-content">
+    <%= render 'swiper' %>
   </div>
 
   <div class="row">
-    <div class="col-12">
-      <div class="row">
-        <% if @videos.present? %>
-          <%= render @videos %>
-        <% else %>
-          <p>投稿動画がありません</p>
-        <% end %>
+    <div class="col-3">
+      <%= render 'sidebar' %>
+    </div>   
+      <div class="col text-cente">
+        <div class="row">
+          <% if @videos.present? %>
+            <%= render @videos %>
+          <% else %>
+            <p>投稿動画がありません</p>
+          <% end %>
+        </div>
+        <%= paginate @videos %>
       </div>
-      <%= paginate @videos %>
     </div>
   </div>
 </div>

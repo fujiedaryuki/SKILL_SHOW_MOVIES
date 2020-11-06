@@ -1,0 +1,17 @@
+<div class="btn--orange">
+  <div class="swiper-parent">
+    <div class="swiper_menu">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><%= render partial: 'swiper_crad', locals: { video: @videos.first } %></div>
+          <div class="swiper-slide"><%= render partial: 'swiper_crad', locals: { video: @videos.first } %></div>
+          <div class="swiper-slide"><%= render partial: 'swiper_crad', locals: { video: @videos.first } %></div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-scrollbar"></div>
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </div>
+</div>
