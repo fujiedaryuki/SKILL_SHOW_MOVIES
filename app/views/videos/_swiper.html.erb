@@ -3,9 +3,9 @@
     <div class="swiper_menu">
       <div class="swiper-container">
         <div class="swiper-wrapper">
-          <div class="swiper-slide"><%= render partial: 'swiper_crad', locals: { video: @videos.first } %></div>
-          <div class="swiper-slide"><%= render partial: 'swiper_crad', locals: { video: @videos.second } %></div>
-          <div class="swiper-slide"><%= render partial: 'swiper_crad', locals: { video: @videos.third} %></div>
+          <div class="swiper-slide"><%= render partial: 'swiper_crad', locals: { video: @head_videos.first} %></div>
+          <div class="swiper-slide"><%= render partial: 'swiper_crad', locals: { video: @head_videos.second } %></div>
+          <div class="swiper-slide"><%= render partial: 'swiper_crad', locals: { video: @head_videos.third} %></div>
         </div>
         <div class="swiper-pagination"></div>
         <div class="swiper-scrollbar"></div>
