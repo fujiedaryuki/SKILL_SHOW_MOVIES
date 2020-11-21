@@ -3,6 +3,7 @@ class VideosController < ApplicationController
   def index
     @q = Video.ransack(params[:q])
     @videos = @q.result(distinct: true).includes(:user).order(created_at: :desc).page(params[:page])
+    @head_videos = Video.includes(:user).order(created_at: :desc)
   end
 
   def new
