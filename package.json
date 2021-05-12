@@ -3,6 +3,6 @@
   "private": true,
   "dependencies": {
     "admin-lte": "^3.0.5",
-    "swiper": "^6.3.5"
+    "swiper": "^6.5.1"
   }
 }
